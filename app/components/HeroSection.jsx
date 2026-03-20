@@ -9,12 +9,12 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex  ">
       {/* Left pink panel */}
-      <div className="w-full lg:w-[48%]  flex  flex-col justify-center px-8 lg:px-16 pt-32 pb-20 relative bg-[#e9c9bb]">
+      <div className="w-full lg:w-[48%]  flex  flex-col justify-center px-8 lg:px-16 pt-32 pb-20 relative bg-[#d0d5ff]">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-[140px] md:text-[140px] lg:text-[140px] font-bold leading-[1.05] tracking-tight text-foreground"
+          className="text-[80px] md:text-[140px] lg:text-[140px] font-bold leading-[1.05] tracking-tight text-foreground"
         >
           Digital
           <br />

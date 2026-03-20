@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Mail, X, Menu } from "lucide-react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 
@@ -9,28 +10,53 @@ const navItems = [
   { name: "Home", href: "/", number: "01" },
   { name: "Agency", href: "/about", number: "02" },
   { name: "Expertise", href: "/expertise", number: "03" },
-  { name: "Portfolio", href: '/portfolios', number: "04" },
+  { name: "Portfolio", href: "/portfolios", number: "04" },
   { name: "Contact", href: "/contact", number: "05" },
 ]
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    let lastScroll = 0
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        setVisible(false) // scroll down → hide
+      } else {
+        setVisible(true) // scroll up → show
+      }
+
+      lastScroll = currentScroll
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
+      {/* NAVBAR */}
       <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5"
+        initial={{ y: 0 }}
+        animate={{ y: visible ? 0 : -120 }}
+        transition={{ duration: 0.3 }}
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5 bg-white/80 backdrop-blur-md"
       >
         <div className="flex space-x-30">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-wider bg-black text-white px-3 py-1.5">
-              DA
-            </span>
+          <Link href="/" className="flex items-center bg-black rounded-2xl">
+            <Image
+              src="/bc-logo.webp"
+              alt="DA Logo"
+              width={80}
+              height={10}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -46,6 +72,7 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
+
         {/* Desktop Button */}
         <Link
           href="/contact"
@@ -56,15 +83,12 @@ export default function Navbar() {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="lg:hidden"
-        >
+        <button onClick={() => setMenuOpen(true)} className="lg:hidden">
           <Menu size={28} />
         </button>
       </motion.header>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -84,7 +108,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Big Nav Links */}
+            {/* Nav Links */}
             <div className="space-y-6">
               {navItems.map((item) => (
                 <Link
@@ -101,13 +125,13 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Socials */}
+            {/* Social */}
             <div>
               <p className="text-blue-600 mb-4">Socials</p>
               <div className="flex gap-6 text-lg">
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
               </div>
             </div>
           </motion.div>

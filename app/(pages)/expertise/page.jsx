@@ -11,7 +11,7 @@ export default function AboutPage() {
     <div className="bg-white text-[#1a1a1a]">
 
       {/* ================= TOP STRIP ================= */}
-      <section className="bg-[#e9c9bb] py-40 relative">
+      <section className="bg-[#D0D5FF] py-40 relative">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <h1 className="text-3xl font-semibold relative inline-block">
             Expertise

@@ -1,5 +1,8 @@
 "use client"
 
+import  Link  from "next/link"
+import Image from "next/image"
+
 export default function FooterSection() {
   return (
     <footer className="bg-[#f3f3f3] py-24">
@@ -11,7 +14,16 @@ export default function FooterSection() {
           {/* Column 1 - Logo & Social */}
           <div>
             <div className="bg-[#1a1a1a] text-white w-20 h-12 flex items-center justify-center text-lg font-semibold mb-16">
-              DA
+                <Link href="/" className="flex items-center bg-black rounded-2xl">
+            <Image
+              src="/bc-logo.webp"
+              alt="DA Logo"
+              width={80}
+              height={10}
+              className="object-contain"
+              priority
+            />
+          </Link>
             </div>
 
             <div className="flex gap-6 text-[#1a1a1a] font-medium">

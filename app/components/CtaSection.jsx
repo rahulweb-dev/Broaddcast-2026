@@ -22,8 +22,8 @@ const stats = [
 
 export default function CtaSection() {
   return (
-    <section className="bg-[#f3f3f3] py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="bg-[#f3f3f3] py-14 sm:py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         {/* Heading */}
         <motion.h2
@@ -31,39 +31,54 @@ export default function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-[#1a1a1a] max-w-5xl"
+          className="
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+            font-semibold leading-snug sm:leading-tight
+            text-[#1a1a1a] max-w-5xl
+          "
         >
           Intuition and strategy integrate
-          <br />
+          <br className="hidden sm:block" />
           the research methodology that we
-          <br />
+          <br className="hidden sm:block" />
           also apply to{" "}
           <span className="relative inline-block">
             <span className="relative z-10">traditional</span>
-            <span className="absolute left-0 bottom-1 w-full h-3 bg-yellow-400 -z-0 rounded-sm"></span>
+            <span className="absolute left-0 bottom-1 w-full h-2 sm:h-3 bg-yellow-400 -z-0 rounded-sm"></span>
           </span>{" "}
           media.
         </motion.h2>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-20 mt-20">
+        <div className="grid lg:grid-cols-3 gap-10 sm:gap-14 lg:gap-20 mt-12 sm:mt-16 lg:mt-20">
 
           {/* Left Column */}
           <div>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
               We combine human empathy and intelligent data to provide the{" "}
               <span className="underline font-medium text-[#1a1a1a]">
                 highest level of satisfaction.
               </span>
             </p>
 
-            <button className="bg-[#1a1a1a] text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:opacity-90 transition">
+            <button className="
+              bg-[#1a1a1a] text-white
+              px-6 sm:px-8 py-3 sm:py-4
+              text-xs sm:text-sm
+              font-semibold uppercase tracking-wide
+              hover:opacity-90 transition
+              w-full sm:w-auto
+            ">
               Let’s Talk Now ✉
             </button>
           </div>
 
           {/* Right Stats Grid */}
-          <div className="lg:col-span-2 grid grid-cols-2 border border-gray-300">
+          <div className="
+            lg:col-span-2
+            grid grid-cols-1 sm:grid-cols-2
+            border border-gray-300
+          ">
 
             {stats.map((stat, i) => (
               <motion.div
@@ -72,13 +87,21 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="p-12 border-b border-r border-gray-300 last:border-r-0"
+                className="
+                  p-6 sm:p-8 lg:p-12
+                  border-b border-gray-300
+                  sm:border-r
+                  last:border-r-0
+                "
               >
-                <p className="text-gray-600 mb-10 max-w-xs">
+                <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 max-w-xs">
                   {stat.title}
                 </p>
 
-                <p className="text-5xl font-semibold text-[#1a1a1a]">
+                <p className="
+                  text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                  font-semibold text-[#1a1a1a]
+                ">
                   ↑{stat.value}
                 </p>
               </motion.div>

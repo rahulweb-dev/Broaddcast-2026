@@ -8,7 +8,7 @@ export default function AboutPage() {
     <div className="bg-white text-[#1a1a1a]">
 
       {/* ================= TOP STRIP ================= */}
-      <section className="bg-[#e9c9bb] py-40 relative">
+      <section className="bg-[#D0D5FF] py-40 relative">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <h1 className="text-3xl font-semibold relative inline-block">
             About us
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
           {/* Right Content */}
           <div>
-            <h2 className="text-4xl font-semibold mb-6">
+            <h2 className="text-4xl font-semibold mb-6 ">
               We’re a creative digital agency.
             </h2>
 
@@ -134,7 +134,7 @@ export default function AboutPage() {
           <Image src="https://crafto.themezaa.com/digital-agency/wp-content/uploads/sites/34/2024/03/demo-digital-agency-01.jpg.webp" width={400} height={500} alt="" />
         </div>
       </section>
-       <MarqueeSection/>
+      <MarqueeSection />
 
     </div>
   )
