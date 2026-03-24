@@ -4,10 +4,10 @@ import Silk from "@/app/components/Silk" // adjust path if needed
 
 const AwardsSection = () => {
   return (
-    <section className="relative py-24 lg:py-32 px-8 lg:px-16 overflow-hidden">
+    <section className="relative py-24 lg:py-32 px-8 lg:px-16 overflow-hidden bg-black">
 
       {/* Silk Background */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <Silk
           speed={3}
           scale={1}
@@ -15,9 +15,9 @@ const AwardsSection = () => {
           noiseIntensity={1.2}
           rotation={0}
         />
-      </div>
+      </div> */}
 
-      <div className="max-w-7xl mx-auto text-white">
+      <div className="max-w-7xl mx-auto  text-white">
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

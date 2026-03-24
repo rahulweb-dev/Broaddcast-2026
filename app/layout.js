@@ -2,6 +2,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import FooterSection from "./components/FooterSection";
+import SmoothScroll from "./components/SmoothScroll";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
         className={`${spaceGrotesk.variable} antialiased font-sans`}
       >
         <Navbar />
-        {children}
+        <SmoothScroll> {children}</SmoothScroll>
         <FooterSection />
       </body>
     </html>

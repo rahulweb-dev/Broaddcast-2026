@@ -3,19 +3,19 @@ import { motion } from "framer-motion"
 
 const stats = [
   {
-    title: "Users on marketplaces we've created in 2023.",
-    value: "8500+",
+    title: "Brands scaled with our digital solutions.",
+    value: "500+",
   },
   {
-    title: "Successfully finished projects with creativity.",
-    value: "660+",
+    title: "Projects delivered across design & development.",
+    value: "1200+",
   },
   {
-    title: "Monthly visitors on our e-Commerce platform.",
-    value: "6834+",
+    title: "Monthly users engaging with our platforms.",
+    value: "50K+",
   },
   {
-    title: "Onboarding conversions growth increased.",
+    title: "Average growth achieved for our clients.",
     value: "300%",
   },
 ]
@@ -37,16 +37,15 @@ export default function CtaSection() {
             text-[#1a1a1a] max-w-5xl
           "
         >
-          Intuition and strategy integrate
+          Strategy meets creativity to build
           <br className="hidden sm:block" />
-          the research methodology that we
+          powerful digital experiences that
           <br className="hidden sm:block" />
-          also apply to{" "}
+          drive{" "}
           <span className="relative inline-block">
-            <span className="relative z-10">traditional</span>
+            <span className="relative z-10">real growth.</span>
             <span className="absolute left-0 bottom-1 w-full h-2 sm:h-3 bg-yellow-400 -z-0 rounded-sm"></span>
-          </span>{" "}
-          media.
+          </span>
         </motion.h2>
 
         {/* Content Grid */}
@@ -55,10 +54,9 @@ export default function CtaSection() {
           {/* Left Column */}
           <div>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-              We combine human empathy and intelligent data to provide the{" "}
-              <span className="underline font-medium text-[#1a1a1a]">
-                highest level of satisfaction.
-              </span>
+              We blend creativity, data, and technology to craft digital
+              solutions that not only look great but also deliver measurable
+              results and long-term growth.
             </p>
 
             <button className="
@@ -69,7 +67,7 @@ export default function CtaSection() {
               hover:opacity-90 transition
               w-full sm:w-auto
             ">
-              Let’s Talk Now ✉
+              Let’s Work Together ✉
             </button>
           </div>
 

@@ -85,7 +85,7 @@ export default function ContactSection() {
         <div className="relative bg-[#D0D5FF] flex items-center justify-center py-12 sm:py-20 px-6 sm:px-10">
 
           {/* Circular Image */}
-          <div className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2">
+          <div className="hidden lg:block absolute -right-1 top-1/2 -translate-y-1/2">
             <Image
               src="https://crafto.themezaa.com/digital-agency/wp-content/uploads/sites/34/2024/04/demo-digital-agency-contact-01.png.webp"
               width={180}

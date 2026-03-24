@@ -3,22 +3,22 @@ import { motion } from "framer-motion"
 
 const stats = [
   {
-    number: "350+",
-    label: "very satisfied clients around the worldwide.",
+    number: "500+",
+    label: "brands empowered with digital transformation.",
   },
   {
-    number: "200+",
-    label: "good award winning digital media agency.",
+    number: "1200+",
+    label: "campaigns successfully launched across industries.",
   },
   {
-    number: "750+",
-    label: "successfully project completed in one year.",
+    number: "98%",
+    label: "client satisfaction rate with long-term partnerships.",
   },
 ]
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#f3f3f3] py-28">
+    <section className=" py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Top Section */}
@@ -32,13 +32,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-4xl font-semibold leading-tight text-[#1a1a1a]"
           >
-            We are a creative
+            We build impactful
             <br />
-            bold digital agency
+            digital experiences
             <br />
-            based in{" "}
+            for brands that{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">london.</span>
+              <span className="relative z-10">grow fast.</span>
               <span className="absolute left-0 bottom-1 w-full h-3 bg-yellow-400 -z-0 rounded-sm"></span>
             </span>
           </motion.h2>
@@ -52,7 +52,7 @@ export default function AboutSection() {
             className="flex justify-center"
           >
             <div className="w-64 h-64 rounded-full bg-[#1a1a1a] flex items-center justify-center">
-              <span className="text-white text-6xl font-semibold">20+</span>
+              <span className="text-white text-6xl font-semibold">10+</span>
             </div>
           </motion.div>
 
@@ -64,11 +64,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="uppercase text-sm font-semibold tracking-widest text-[#1a1a1a] mb-4">
-              20+ Years of Experience
+              A Performance-Driven Digital Agency
             </p>
             <p className="text-gray-600 leading-relaxed">
-              We are dedicated to providing outstanding digital and design
-              services meet the functional and aesthetic.
+              We combine strategy, creativity, and technology to craft
+              high-performing digital solutions. From branding to performance
+              marketing, we help businesses scale faster and stand out in a
+              competitive digital landscape.
             </p>
           </motion.div>
         </div>

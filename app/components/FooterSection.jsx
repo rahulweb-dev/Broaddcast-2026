@@ -1,6 +1,6 @@
 "use client"
 
-import  Link  from "next/link"
+import Link from "next/link"
 import Image from "next/image"
 
 export default function FooterSection() {
@@ -13,24 +13,22 @@ export default function FooterSection() {
 
           {/* Column 1 - Logo & Social */}
           <div>
-            <div className="bg-[#1a1a1a] text-white w-20 h-12 flex items-center justify-center text-lg font-semibold mb-16">
-                <Link href="/" className="flex items-center bg-black rounded-2xl">
-            <Image
-              src="/bc-logo.webp"
-              alt="DA Logo"
-              width={80}
-              height={10}
-              className="object-contain"
-              priority
-            />
-          </Link>
-            </div>
+            <Link href="/" className="inline-block mb-12 bg-black rounded-3xl">
+              <Image
+                src="/bc-logo.webp"
+                alt="Broaddcast Logo"
+                width={120}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </Link>
 
             <div className="flex gap-6 text-[#1a1a1a] font-medium">
-              <span>Fb.</span>
-              <span>Ig.</span>
-              <span>Tw.</span>
-              <span>Be.</span>
+              <Link href="#">Fb.</Link>
+              <Link href="#">Ig.</Link>
+              <Link href="#">Ln.</Link>
+              <Link href="#">Tw.</Link>
             </div>
           </div>
 
@@ -38,27 +36,27 @@ export default function FooterSection() {
           <div className="space-y-12">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide mb-3">
-                Rotterdam
+                Hyderabad
               </p>
               <p className="font-semibold text-[#1a1a1a]">
-                Crafto digital media.
+                Broaddcast Digital Agency
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Graaf florisstraat 22A,<br />
-                Netherlands.
+                Hitech City,<br />
+                Hyderabad, India.
               </p>
             </div>
 
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide mb-3">
-                Barcelona
+                Remote
               </p>
               <p className="font-semibold text-[#1a1a1a]">
-                Crafto digital media.
+                Global Clients
               </p>
               <p className="text-gray-600 leading-relaxed">
-                365 Grand via de coarts,<br />
-                Barcelona.
+                Serving clients across India,<br />
+                UAE, and USA.
               </p>
             </div>
           </div>
@@ -70,30 +68,36 @@ export default function FooterSection() {
                 Work inquiries
               </p>
               <p className="text-gray-600 mb-2">
-                Interested in working with us?
+                Let’s build something amazing together.
               </p>
-              <p className="font-semibold underline text-[#1a1a1a]">
-                hello@yourdomain.com
-              </p>
+              <a
+                href="mailto:hello@broaddcast.com"
+                className="font-semibold underline text-[#1a1a1a]"
+              >
+                hello@broaddcast.com
+              </a>
             </div>
 
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide mb-3">
-                Work with us
+                Careers
               </p>
               <p className="text-gray-600 mb-2">
-                Looking for a job opportunity?
+                Join our growing creative team.
               </p>
-              <p className="font-semibold underline text-[#1a1a1a]">
-                hr@yourdomain.com
-              </p>
+              <a
+                href="mailto:careers@broaddcast.com"
+                className="font-semibold underline text-[#1a1a1a]"
+              >
+                careers@broaddcast.com
+              </a>
             </div>
           </div>
 
           {/* Column 4 - Newsletter */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide mb-6">
-              Sign up for the newsletter
+              Subscribe for updates
             </p>
 
             <div className="relative mb-6">
@@ -102,13 +106,13 @@ export default function FooterSection() {
                 placeholder="Enter your email..."
                 className="w-full border border-gray-300 px-4 py-3 bg-transparent focus:outline-none"
               />
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 text-black">
                 ✉
-              </span>
+              </button>
             </div>
 
             <p className="text-gray-600 flex items-center gap-2 text-sm">
-              🤝 Protecting your privacy
+              🔒 We respect your privacy
             </p>
           </div>
 
@@ -118,16 +122,13 @@ export default function FooterSection() {
         <div className="border-t border-gray-300 mt-20 pt-8 flex flex-col md:flex-row justify-between text-gray-600 text-sm">
 
           <p>
-            © 2025 Crafto is Proudly Powered by{" "}
-            <span className="underline text-[#1a1a1a] font-medium">
-            Broaddcast
-            </span>
+            © {new Date().getFullYear()} Broaddcast. All rights reserved.
           </p>
 
           <div className="flex gap-8 mt-4 md:mt-0">
-            <span>Privacy policy</span>
-            <span>Terms and conditions</span>
-            <span>Copyright</span>
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Terms & Conditions</Link>
+            <Link href="#">Sitemap</Link>
           </div>
 
         </div>
